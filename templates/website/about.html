@@ -1,0 +1,152 @@
+{% extends "website/base.html" %}
+{% load static %}
+{% block title %}
+  About
+{% endblock title %}
+{% block content %}
+<!--Page Header Start-->
+<section class="page-header">
+  <div class="page-header-bg" style="background-image: url({% static 'images/backgrounds/page-header-bg.jpg' %})">
+  </div>
+  <div class="container">
+      <div class="page-header__inner">
+          <h2>About us</h2>
+          <ul class="thm-breadcrumb list-unstyled">
+              <li><a href="{% url 'website:index' %}">Home</a></li>
+              <li class="active">About</li>
+          </ul>
+      </div>
+  </div>
+</section>
+<!--Page Header End-->
+
+<!--Get To Know Start-->
+<section class="get-to-know">
+  <div class="container">
+      <div class="row">
+          <div class="col-xl-5">
+              <div class="get-to-know__left">
+                  <div class="section-title text-left">
+                      <span class="section-title__tagline">get to know us</span>
+                      <h2 class="section-title__title">Work Together for a Business Success</h2>
+                  </div>
+                  <p class="get-to-know__text">Lorem ipsum dolor sit amet, consectetur nod adipisicing elit
+                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua lonm andhn.</p>
+                  <ul class="list-unstyled get-to-know__points">
+                      <li>
+                          <div class="icon">
+                              <i class="fa fa-check"></i>
+                          </div>
+                          <div class="text">
+                              <p>Nsectetur cing elit.</p>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="icon">
+                              <i class="fa fa-check"></i>
+                          </div>
+                          <div class="text">
+                              <p>Suspe ndisse suscipit sagittis leo.</p>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="icon">
+                              <i class="fa fa-check"></i>
+                          </div>
+                          <div class="text">
+                              <p>Entum estibulum dignissim posuere.</p>
+                          </div>
+                      </li>
+                      <li>
+                          <div class="icon">
+                              <i class="fa fa-check"></i>
+                          </div>
+                          <div class="text">
+                              <p>Donec tristique ante vel sem dictum rhoncus.</p>
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+          <div class="col-xl-7">
+              <div class="get-to-know__right">
+                  <ul class="get-to-know__images list-unstyled">
+                      <li>
+                          <div class="get-to-know__img-1">
+                              <img src="{% static 'images/resources/get-to-know-img-1.jpg' %}" alt="">
+                          </div>
+                      </li>
+                      <li>
+                          <div class="get-to-know__img-2">
+                              <img src="{% static 'images/resources/get-to-know-img-2.jpg' %}" alt="">
+                          </div>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<!--Get To Know End-->
+<section class="team-two">
+  <div class="container">
+      <div class="section-title text-center">
+          <span class="section-title__tagline">Professional Consultant</span>
+          <h2 class="section-title__title">Meet Our Experts</h2>
+      </div>
+      <div class="row">
+          <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="100ms">
+              <!--Team Two Single-->
+              <div class="team-one__single">
+                  <div class="team-one__img">
+                      <img src="{% static 'images/team/team-two-img-1.jpg' %}" alt="">
+                      <ul class="list-unstyled team-one__social">
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                      </ul>
+                  </div>
+                  <div class="team-one__content">
+                      <h4 class="team-one__name">Sarah Albert</h4>
+                      <p class="team-one__title">Consultant</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="200ms">
+              <!--Team Two Single-->
+              <div class="team-one__single">
+                  <div class="team-one__img">
+                      <img src="{% static 'images/team/team-two-img-2.jpg' %}" alt="">
+                      <ul class="list-unstyled team-one__social">
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                      </ul>
+                  </div>
+                  <div class="team-one__content">
+                      <h4 class="team-one__name">Mike Hardson</h4>
+                      <p class="team-one__title">Manager</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-xl-4 col-lg-4 wow fadeInUp" data-wow-delay="300ms">
+              <!--Team Two Single-->
+              <div class="team-one__single">
+                  <div class="team-one__img">
+                      <img src="{% static 'images/team/team-two-img-3.jpg' %}" alt="">
+                      <ul class="list-unstyled team-one__social">
+                          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                          <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                      </ul>
+                  </div>
+                  <div class="team-one__content">
+                      <h4 class="team-one__name">Jessica Brown</h4>
+                      <p class="team-one__title">CO - Founder</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+{% endblock content %}
