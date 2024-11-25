@@ -49,6 +49,9 @@ INSTALLED_APPS = [
     'university', 
     'website', 
 
+    # Other Apps
+    'widget_tweaks',
+
 ]
 
 MIDDLEWARE = [

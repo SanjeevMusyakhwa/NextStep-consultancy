@@ -1,0 +1,69 @@
+{% extends "website/base.html" %}
+{% load widget_tweaks %}
+{% block title %}
+  Login
+{% endblock title %}
+
+{% block content %}
+<section class="page-header">
+  <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
+  </div>
+  <div class="container">
+      <div class="page-header__inner">
+          <h2>Login</h2>
+          <ul class="thm-breadcrumb list-unstyled">
+              <li><a href="{% url 'website:index' %}">Home</a></li>
+              <li class="active">Login</li>
+          </ul>
+      </div>
+  </div>
+</section>
+<section class="contact-page">
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="section-title__tagline">Login</span>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="contact-page__form">
+                    <form class="login-form" method="post" action="{% url 'accounts:login_user' %}">
+                        {% csrf_token %}
+                        <div class="row">
+                            <!-- First Name -->
+                            <div class="col-md-12">
+                                <div class="comment-form__input-box">
+                                    <label>Email <span class="text-danger">*</span></label>
+                                    <input type="email" name="email" class="form-control", placeholder="Email">
+                                </div>
+                            </div>
+                           
+                            
+                            
+                            
+                            <!-- Password -->
+                            <div class="col-md-12">
+                                <div class="comment-form__input-box">
+                                    <label>Password <span class="text-danger">*</span></label>
+                                    <input type="password" name="password" class="form-control", placeholder="Password">
+
+                                </div>
+                            </div>
+                            <!-- Submit Button -->
+                            <div class="col-md-12">
+                                <button class="btn btn-primary w-100" type="submit">Login</button>
+                            </div>
+                            <!-- Already Have an Account -->
+                            <div class="mx-auto text-center">
+                                <p class="mb-0 mt-3">
+                                    <small class="text-dark mr-2">Already have an account?</small> 
+                                    <a href="{% url 'accounts:login_user' %}" class="text-dark font-weight-bold">Sign in</a>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

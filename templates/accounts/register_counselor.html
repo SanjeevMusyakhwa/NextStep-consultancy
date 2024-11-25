@@ -1,64 +1,92 @@
 {% extends "website/base.html" %}
+{% load widget_tweaks %}
 {% block title %}
   Register as Counselor
 {% endblock title %}
+
 {% block content %}
 <section class="page-header">
   <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
   </div>
   <div class="container">
       <div class="page-header__inner">
-          <h2>About us</h2>
+          <h2>Register as Counselor</h2>
           <ul class="thm-breadcrumb list-unstyled">
-              <li><a href="index.html">Home</a></li>
+              <li><a href="{% url 'website:index' %}">Home</a></li>
               <li class="active">Register as Counselor</li>
           </ul>
       </div>
   </div>
 </section>
 <section class="contact-page">
-  <div class="container">
-      <div class="section-title text-center">
-          <span class="section-title__tagline">Register as Counselor</span>
-      </div>
-      <div class="row">
-          <div class="col-xl-12">
-              <div class="contact-page__form">
-                  <form action="{% url 'accounts:register_counselor' %}" class="comment-one__form contact-form-validated" novalidate="novalidate">
-                      <div class="row">
-                          <div class="col-xl-6">
-                              <div class="comment-form__input-box">
-                                  <input type="text" placeholder="Your Name" name="name">
-                              </div>
-                          </div>
-                          <div class="col-xl-6">
-                              <div class="comment-form__input-box">
-                                  <input type="email" placeholder="Email Address" name="email">
-                              </div>
-                          </div>
-                          <div class="col-xl-6">
-                              <div class="comment-form__input-box">
-                                  <input type="text" placeholder="Phone Number" name="phone">
-                              </div>
-                          </div>
-                          <div class="col-xl-6">
-                              <div class="comment-form__input-box">
-                                  <input type="email" placeholder="Subject" name="Subject">
-                              </div>
-                          </div>
-                      </div>
-                      <div class="row">
-                          <div class="col-xl-12">
-                              <div class="comment-form__input-box">
-                                  <textarea name="message" placeholder="Write a Message"></textarea>
-                              </div>
-                              <button type="submit" class="thm-btn comment-form__btn">send a message</button>
-                          </div>
-                      </div>
-                  </form>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="container">
+        <div class="section-title text-center">
+            <span class="section-title__tagline">Register as Counselor</span>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="contact-page__form">
+                    <form class="login-form" method="post" action="{% url 'accounts:register_counselor' %}">
+                        {% csrf_token %}
+                        <div class="row">
+                            <!-- First Name -->
+                            <div class="col-md-6">
+                                <div class="comment-form__input-box">
+                                    <label>First Name <span class="text-danger">*</span></label>
+                                    {{ form.first_name|add_class:"form-control"|attr:"placeholder:Enter your First Name" }}
+                                </div>
+                            </div>
+                            <!-- Last Name -->
+                            <div class="col-md-6">
+                                <div class="comment-form__input-box">
+                                    <label>Last Name <span class="text-danger">*</span></label>
+                                    {{ form.last_name|add_class:"form-control"|attr:"placeholder:Enter your Last Name" }}
+                                </div>
+                            </div>
+                            <!-- Email -->
+                            <div class="col-md-12">
+                                <div class="comment-form__input-box">
+                                    <label>Your Email <span class="text-danger">*</span></label>
+                                    {{ form.email|add_class:"form-control"|attr:"placeholder:Enter your Email" }}
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="comment-form__input-box">
+                                    <label>Phone Number <span class="text-danger">*</span></label>
+                                    {{ form.phone_number|add_class:"form-control"|attr:"placeholder:Enter your Phone Number" }}
+                                </div>
+                            </div>
+                            
+                            <!-- Password -->
+                            <div class="col-md-12">
+                                <div class="comment-form__input-box">
+                                    <label>Password <span class="text-danger">*</span></label>
+                                    {{ form.password1|add_class:"form-control"|attr:"placeholder:Enter your Password" }}
+                                </div>
+                            </div>
+                            <!-- Confirm Password -->
+                            <div class="col-md-12">
+                                <div class="comment-form__input-box">
+                                    <label>Confirm Password <span class="text-danger">*</span></label>
+                                    {{ form.password2|add_class:"form-control"|attr:"placeholder:Re-enter your Password" }}
+                                </div>
+                            </div>
+                            <!-- Submit Button -->
+                            <div class="col-md-12">
+                                <button class="btn btn-primary w-100" type="submit">Register</button>
+                            </div>
+                            <!-- Already Have an Account -->
+                            <div class="mx-auto text-center">
+                                <p class="mb-0 mt-3">
+                                    <small class="text-dark mr-2">Already have an account?</small> 
+                                    <a href="{% url 'accounts:login_user' %}" class="text-dark font-weight-bold">Sign in</a>
+                                </p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 {% endblock content %}

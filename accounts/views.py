@@ -9,12 +9,15 @@ def register_student(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            user = form.save(commit=False)
-            user.role = 'Student'  # Set the role to 'Student'
-            user.save()
+            student = form.save(commit=False)
+            student.username = student.email
+            student.role = 'Student'  # Set the role to 'Student'
+            student.save()
+            print("Created Sucessfully")
             messages.success(request, "Account Created Successfully.. Please Login")
             return redirect('accounts:login_user')
         else:
+            print('Error')
             messages.warning(request, 'Something went wrong... Try again later')
             return redirect('accounts:register_student')
     else:
@@ -25,9 +28,10 @@ def register_counselor(request):
     if request.method == 'POST':
         form = UserRegisterForm(request.POST)
         if form.is_valid():
-            user = form.save(commit=False)
-            user.role = 'Counselor'  # Set the role to 'Counselor'
-            user.save()
+            counselor = form.save(commit=False)
+            counselor.username = counselor.email
+            counselor.role = 'Counselor'  # Set the role to 'Counselor'
+            counselor.save()
             messages.success(request, "Account Created Successfully.. Please Login")
             return redirect('accounts:login_user')
         else:

@@ -9,10 +9,10 @@
 
     {% endblock title %}</title>
   <!-- favicons Icons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'images/favicons/apple-touch-icon.png' %}" />
-  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'images/favicons/favicon-32x32.png' %}" />
-  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicons/favicon-16x16.png' %}" />
-  <link rel="manifest" href="{% static 'images/favicons/site.webmanifest' %}" />
+  <link rel="apple-touch-icon" sizes="180x180" href="{% static 'index/images/favicons/apple-touch-icon.png' %}" />
+  <link rel="icon" type="image/png" sizes="32x32" href="{% static 'index/images/favicons/favicon-32x32.png' %}" />
+  <link rel="icon" type="image/png" sizes="16x16" href="{% static 'index/images/favicons/favicon-16x16.png' %}" />
+  <link rel="manifest" href="{% static 'index/images/favicons/site.webmanifest' %}" />
   <meta name="description" content="Conult HTML Template For Business" />
 
   <!-- fonts -->
@@ -23,35 +23,35 @@
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
     rel="stylesheet">
 
-  <link rel="stylesheet" href="{% static 'vendors/bootstrap/css/bootstrap.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/animate/animate.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/animate/custom-animate.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/fontawesome/css/all.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/jarallax/jarallax.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/jquery-magnific-popup/jquery.magnific-popup.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/nouislider/nouislider.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/nouislider/nouislider.pips.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/odometer/odometer.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/swiper/swiper.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/conult-icons/style.css' %}">
-  <link rel="stylesheet" href="{% static 'vendors/tiny-slider/tiny-slider.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/reey-font/stylesheet.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.carousel.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/owl-carousel/owl.theme.default.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/bxslider/jquery.bxslider.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/bootstrap-select/css/bootstrap-select.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/vegas/vegas.min.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/jquery-ui/jquery-ui.css' %}" />
-  <link rel="stylesheet" href="{% static 'vendors/timepicker/timePicker.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/bootstrap/css/bootstrap.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/animate/animate.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/animate/custom-animate.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/fontawesome/css/all.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/jarallax/jarallax.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/jquery-magnific-popup/jquery.magnific-popup.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/nouislider/nouislider.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/nouislider/nouislider.pips.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/odometer/odometer.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/swiper/swiper.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/conult-icons/style.css' %}">
+  <link rel="stylesheet" href="{% static 'index/vendors/tiny-slider/tiny-slider.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/reey-font/stylesheet.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/owl-carousel/owl.carousel.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/owl-carousel/owl.theme.default.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/bxslider/jquery.bxslider.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/bootstrap-select/css/bootstrap-select.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/vegas/vegas.min.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/jquery-ui/jquery-ui.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/vendors/timepicker/timePicker.css' %}" />
 
   <!-- template styles -->
-  <link rel="stylesheet" href="{% static 'css/conult.css' %}" />
-  <link rel="stylesheet" href="{% static 'css/conult-responsive.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/css/conult.css' %}" />
+  <link rel="stylesheet" href="{% static 'index/css/conult-responsive.css' %}" />
 </head>
 
 <body>
   <div class="preloader">
-    <img class="preloader__image" width="60" src="{% static 'images/loader.png' %}" alt="" />
+    <img class="preloader__image" width="60" src="{% static 'index/images/loader.png' %}" alt="" />
   </div>
   <!-- /.preloader -->
   <div class="page-wrapper">
@@ -59,7 +59,7 @@
       <nav class="main-menu main-menu-three clearfix">
         <div class="main-menu-three__wrapper clearfix">
           <div class="main-menu-three__wrapper-logo">
-            <a href="{% url 'website:index' %}"><img src="{% static 'images/resources/logo-1.png' %}" alt=""></a>
+            <a href="{% url 'website:index' %}"><img src="{% static 'index/images/resources/logo-1.png' %}" alt=""></a>
           </div>
           <div class="main-menu-three__wrapper-main-menu">
             <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
@@ -107,7 +107,7 @@
             <div class="col-xl-5 col-lg-5 wow fadeInUp" data-wow-delay="100ms">
               <div class="site-footer__top-left">
                 <div class="site-footer__top-logo-content">
-                  <a href="{% url 'website:index' %}"><img src="{% static 'images/logo-light-1.png' %}" width="146" alt=""></a>
+                  <a href="{% url 'website:index' %}"><img src="{% static 'index/images/logo-light-1.png' %}" width="146" alt=""></a>
                   <p class="site-footer__top-text">Welcome to our consultancy <br> agency. Lore ipsum
                     simply text <br> amet cing elit.</p>
                 </div>
@@ -194,7 +194,7 @@
       <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
       <div class="logo-box">
-        <a href="index.html" aria-label="logo image"><img src="{% static 'images/resources/logo-1.png' %}" width="155"
+        <a href="index.html" aria-label="logo image"><img src="{% static 'index/images/resources/logo-1.png' %}" width="155"
             alt="" /></a>
       </div>
       <!-- /.logo-box -->
@@ -246,34 +246,34 @@
   <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
 
-  <script src="{% static 'vendors/jquery/jquery-3.6.0.min.js' %}"></script>
-  <script src="{% static 'vendors/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
-  <script src="{% static 'vendors/jarallax/jarallax.min.js' %}"></script>
-  <script src="{% static 'vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js' %}"></script>
-  <script src="{% static 'vendors/jquery-appear/jquery.appear.min.js' %}"></script>
-  <script src="{% static 'vendors/jquery-circle-progress/jquery.circle-progress.min.js' %}"></script>
-  <script src="{% static 'vendors/jquery-magnific-popup/jquery.magnific-popup.min.js' %}"></script>
-  <script src="{% static 'vendors/jquery-validate/jquery.validate.min.js' %}"></script>
-  <script src="{% static 'vendors/nouislider/nouislider.min.js' %}"></script>
-  <script src="{% static 'vendors/odometer/odometer.min.js' %}"></script>
-  <script src="{% static 'vendors/swiper/swiper.min.js' %}"></script>
-  <script src="{% static 'vendors/tiny-slider/tiny-slider.min.js' %}"></script>
-  <script src="{% static 'vendors/wnumb/wNumb.min.js' %}"></script>
-  <script src="{% static 'vendors/wow/wow.js' %}"></script>
-  <script src="{% static 'vendors/isotope/isotope.js' %}"></script>
-  <script src="{% static 'vendors/countdown/countdown.min.js' %}"></script>
-  <script src="{% static 'vendors/owl-carousel/owl.carousel.min.js' %}"></script>
-  <script src="{% static 'vendors/bxslider/jquery.bxslider.min.js' %}"></script>
-  <script src="{% static 'vendors/bootstrap-select/js/bootstrap-select.min.js' %}"></script>
-  <script src="{% static 'vendors/vegas/vegas.min.js' %}"></script>
-  <script src="{% static 'vendors/jquery-ui/jquery-ui.js' %}"></script>
-  <script src="{% static 'vendors/timepicker/timePicker.js' %}"></script>
+  <script src="{% static 'index/vendors/jquery/jquery-3.6.0.min.js' %}"></script>
+  <script src="{% static 'index/vendors/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'index/vendors/jarallax/jarallax.min.js' %}"></script>
+  <script src="{% static 'index/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js' %}"></script>
+  <script src="{% static 'index/vendors/jquery-appear/jquery.appear.min.js' %}"></script>
+  <script src="{% static 'index/vendors/jquery-circle-progress/jquery.circle-progress.min.js' %}"></script>
+  <script src="{% static 'index/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js' %}"></script>
+  <script src="{% static 'index/vendors/jquery-validate/jquery.validate.min.js' %}"></script>
+  <script src="{% static 'index/vendors/nouislider/nouislider.min.js' %}"></script>
+  <script src="{% static 'index/vendors/odometer/odometer.min.js' %}"></script>
+  <script src="{% static 'index/vendors/swiper/swiper.min.js' %}"></script>
+  <script src="{% static 'index/vendors/tiny-slider/tiny-slider.min.js' %}"></script>
+  <script src="{% static 'index/vendors/wnumb/wNumb.min.js' %}"></script>
+  <script src="{% static 'index/vendors/wow/wow.js' %}"></script>
+  <script src="{% static 'index/vendors/isotope/isotope.js' %}"></script>
+  <script src="{% static 'index/vendors/countdown/countdown.min.js' %}"></script>
+  <script src="{% static 'index/vendors/owl-carousel/owl.carousel.min.js' %}"></script>
+  <script src="{% static 'index/vendors/bxslider/jquery.bxslider.min.js' %}"></script>
+  <script src="{% static 'index/vendors/bootstrap-select/js/bootstrap-select.min.js' %}"></script>
+  <script src="{% static 'index/vendors/vegas/vegas.min.js' %}"></script>
+  <script src="{% static 'index/vendors/jquery-ui/jquery-ui.js' %}"></script>
+  <script src="{% static 'index/vendors/timepicker/timePicker.js' %}"></script>
 
 
 
 
   <!-- template js -->
-  <script src="{% static 'js/conult.js' %}"></script>
+  <script src="{% static 'index/js/conult.js' %}"></script>
 </body>
 
 </html>
